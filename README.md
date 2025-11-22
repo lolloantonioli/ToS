@@ -8,10 +8,7 @@ We want to realise an embedded system implementing a game called *Turn on the Se
 
 ### Description 
 
-The game board includes 4 green leds L1, L2, L3, L4 and red led LS, four tactile buttons B1, B2, B3, B4 and a potentiometer Pot, and an LCD. This is the suggested  layout:
-
-
-![layout](assignment-01-sketch.png)
+The game board includes 4 green leds L1, L2, L3, L4 and red led LS, four tactile buttons B1, B2, B3, B4 and a potentiometer Pot, and an LCD.
 
 During the game, the system repeatedly displays on the LCD a number of 4 distinct digits, each digit in the range between 1 and 4. Examples are: `1234`, `3421`, `4132`. Given the four digits, the player must turn on the leds in the order defined by the digits, from left to right, using the corresponding tactile buttons. Example: if the number displayed is `4132`, then the player must turn on the leds in the sequence L4, L1, L3, L2, by pressing in sequence the buttons B4, B1, B3, B2. Each button B[i] turns on the corresponding led L[i]. Each game involves multiple rounds. At each round, a new 4-digits number is chosen (at random) and displayed, and the player has a maximum amount of time T1 to turn on the sequence. If the player does it right, a score - starting from zero - is increased and the game goes on, with another round, but  reducing the time T1 of some factor F.  If the player does not turn the sequence on time or makes mistakes, the red led Ls is turned on for 2 seconds and the game ends, displaying the score on the LCD. 
 
