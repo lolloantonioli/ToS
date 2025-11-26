@@ -17,9 +17,8 @@ void setup() {
     pinMode(BUTTON_PIN2, INPUT);
     pinMode(BUTTON_PIN3, INPUT);
     pinMode(BUTTON_PIN4, INPUT);
-    pinMode(2, INPUT);
     
-    attachInterrupt(digitalPinToInterrupt(3), wakeUp, RISING);
+    attachInterrupt(digitalPinToInterrupt(2), wakeUp, RISING);
     
     initializeLcd();
     initializeGame();
